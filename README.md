@@ -1,4 +1,4 @@
-# pygame_engine 1.0 #
+# pygame_engine 1.1 #
 
 Global Variables you need to know about:
  -game_state (string) change this string so the game knows which branch of the main game loop to run
@@ -46,6 +46,7 @@ A game_object class with easy to use rendering functions.
    -Set_rotation () takes an int and the relative boolean
    -Set_scale () takes a tuple (int, int) and the relative boolean
   -All of these functions have an optional "relative" flag as the second parameter, set it to true to take the game_object's current state into account.
+  -The Set_ fuctions also add the game_objects rect to the list of locations to update on the next frame, so only use these functions to move your objects around.
  -The world_space flag (boolean) tells the game_object if it needs to take the global camera_position into account for it's positioning on screen. If the flag is false the object is considered to be in screen_space.
  -Set_image properly unlocks and locks the surface, although this will probably change and be accompanied by a Render_over() method soon.
  -Draw() will draw the object, taking into condideration its size, scale, and if it is in world_space or not.
